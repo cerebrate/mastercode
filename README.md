@@ -41,6 +41,18 @@ The template enables the Feather to be placed in deep sleep for a set amount of 
 
 The template permits password-protected over-the-air updates from the Arduino IDE, to allow simple updating of in-place devices.
 
+## Required libraries
+
+To compile this, you'll need to install the following libraries from the Arduino IDE:
+
+* Adafruit GFX Library
+* Adafruit MQTT Library
+* Adafruit SSD1306
+* Adafruit_FeatherOLED (from Github, as described here: https://learn.adafruit.com/adafruit-oled-featherwing/featheroled-library#featheroled-library )
+* ArduinoJson
+* ArduinoOTA
+* TaskScheduler
+
 ## Configuration
 
 See the _USER SETTINGS SECTION_ in the code, documented in comments.
