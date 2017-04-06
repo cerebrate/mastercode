@@ -216,6 +216,8 @@ void _oled_initialize()
   // Enable the WiFi displays.
   _oled.setConnectedVisible (true);
   _oled.setRSSIVisible (true);
+  _oled.setRSSIIcon (true);
+  _oled.setRSSIAsPercentage (true);
   _oled.setIPAddressVisible (true);
 
   // Refresh the screen.
@@ -273,6 +275,9 @@ bool _wifiStartup ()
 #endif
 
   Serial.print ("Connecting to WLAN:"); Serial.println(WLAN_SSID);
+
+  // WiFi to station mode only.
+  WiFi.mode (WIFI_STA);
 
   // Set hostname to device name.
   wifi_station_set_hostname (DEV_NAME);
