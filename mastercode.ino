@@ -817,7 +817,11 @@ void fail (char * reason)
   // Stop system activites - except OTA update and WiFi, which we leave running
   // to allow repair of the fail.
   _tBlink.disable ();
+
+#if VBAT_ENABLED == 1
   _tBattery.disable ();
+#endif
+
   _tWatchdog.disable ();
   _tMqtt.disable ();
 
